@@ -49,13 +49,8 @@ const backupConfig = () => {
 
 const createConfig = (answers) => {
 	Object.assign(config, {
-		stripe: {
-			apiKey: answers.stripe_api_key,
-		},
-		firebase: {
-			databaseURL: answers.firebase_database_url,
-			serviceAccountKeyPath: serviceAccountKeyPath
-		}
+		stripe: { apiKey: answers.stripe_api_key },
+		firebase: { databaseURL: answers.firebase_database_url, serviceAccountKeyPath }
 	});
 	return {
 		answers,

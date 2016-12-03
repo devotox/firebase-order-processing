@@ -1,0 +1,32 @@
+Test
+-------------------------
+Implement using Node.js, Firebase and Stripe a clean and minimal solution that for every new order in the Firebase database creates a new customer & charge on Stripe and updates the order with the customer & charge id returned by the Stripe API.
+
+- If required improve the proposed order model.
+- Don't forget about structuring your folders and code.
+- Use GitHub for your source control.
+
+Order Model
+----------------------------
+{
+    "O1": {
+        "customer": {
+            "id": "C1",
+            "name": "John Smith",
+            "email": "john@smith.com"
+        },
+        "product":  {
+            "id": "I1",
+            "name": "Item",
+            "price": 3.99
+        },
+        "payment": {
+            "type": "card",
+            "details": {
+                "number": "4000 0566 5566 5556",
+                "expiry": "02/2020",
+                "cvc": 222
+            }
+        }
+    }
+}

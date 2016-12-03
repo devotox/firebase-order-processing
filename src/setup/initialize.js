@@ -3,7 +3,7 @@
 const { composeP, compose, curry } = require('ramda');
 const { chainP } = require('../utils/ramda-utils');
 const database = require('../modules/firebase').database();
-const { set } = require('../modules/set-data');
+const { setMultiple } = require('../modules/set-data');
 
 const products = require('../../data/products.json');
 const orders = require('../../data/orders.json');
@@ -22,15 +22,13 @@ const closeDatabase = () => database.goOffline();
 
 const cleanDatabase = () => database.ref('/').remove();
 
-const addToDatabase = curry((path, data) => chainP(set(path), data));
+const populateUsers = () => setMultiple('users', users);
 
-const populateUsers = () => addToDatabase('users', users);
-
-const populateProducts = () => addToDatabase('products', products);
+const populateProducts = () => setMultiple('products', products);
 
 const populateStatic = () => Promise.all([ populateUsers(), populateProducts() ]);
 
-const populateOrders = compose(addToDatabase('orders'), combineUserProductOrder);
+const populateOrders = compose(setMultiple('orders'), combineUserProductOrder);
 
 const initialize = composeP(closeDatabase, populateOrders, populateStatic, cleanDatabase);
 
