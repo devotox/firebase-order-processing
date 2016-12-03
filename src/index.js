@@ -17,7 +17,9 @@ const closeDatabase = () => database.goOffline();
 
 const error = compose(closeDatabase, console.error);
 
-const run = composeP(closeDatabase, processOrders, validateOrders, getOrders);
+const showOrders = () => get('orders').then((orders) => console.log(orders));
+
+const run = composeP(closeDatabase, showOrders, processOrders, validateOrders, getOrders);
 
 const success = compose(closeDatabase, (() => console.log('Orders Processed!')));
 
