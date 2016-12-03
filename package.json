@@ -28,8 +28,9 @@
     "release-major": "npm version major",
     "postversion": "git push && git push --tags",
     "preversion": "flow && sidekick run && npm test",
-    "test": "sidekick run && npm run mocha && npm run flow",
-    "start": "npm run clean && npm run build && npm run setup && npm run process"
+    "test": "sidekick run && npm run cover && npm run flow",
+    "start": "npm run clean && npm run build && npm run setup && npm run process",
+    "cover": "istanbul cover ./node_modules/.bin/_mocha --- tests/index.js --timeout 5000"
   },
   "directories": {
     "test": "tests"
@@ -46,7 +47,6 @@
     "inquirer": "1.2.3",
     "model-base": "1.1.2",
     "ramda": "0.22.1",
-    "sidekick": "1.12.2",
     "stripe": "4.14.0"
   },
   "devDependencies": {
@@ -55,6 +55,7 @@
     "babel-plugin-transform-flow-strip-types": "6.18.0",
     "chai": "3.5.0",
     "flow-bin": "0.36.0",
+    "istanbul": "^0.4.5",
     "mocha": "3.2.0",
     "sidekick": "1.12.2"
   },

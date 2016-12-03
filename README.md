@@ -1,6 +1,7 @@
 # Firebase Order Processing
 
 [![Build Status](https://travis-ci.org/devotox/firebase-order-processing.svg?branch=master)](https://travis-ci.org/devotox/firebase-order-processing)
+[![Coverage Status](https://coveralls.io/repos/github/devotox/firebase-order-processing/badge.svg?branch=master)](https://coveralls.io/github/devotox/firebase-order-processing?branch=master)
 
 Order processing in a firebase database.
 
@@ -89,7 +90,13 @@ Order processing in a firebase database.
 	- check for TODOs
 	- outdated dependencies
 - mocha
+- istanbul coverage
 - flow
+
+### Cover
+`npm run cover`
+- runs test
+- runs istanbul coverage checks to make  sure most lines are hit
 
 ### Process
 `npm run process`

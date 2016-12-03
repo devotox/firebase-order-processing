@@ -11,3 +11,6 @@ secrets/*
 
 # Allow Gitkeep
 !*.gitkeep
+
+# test files
+coverage/*

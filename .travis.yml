@@ -18,7 +18,8 @@ install:
 - npm install
 script:
 - sidekick run --ci
-- npm run mocha
+# - npm run mocha
+- npm run cover
 - flow
 after_script:
-- cat ./test-coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+- cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js

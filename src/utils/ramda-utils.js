@@ -5,7 +5,7 @@ const Future = require('fluture');
 
 const { compose, chain, curry, map, assoc, prop, zipObj, toPairs, indexBy } = require('ramda');
 
-// chainP :: ((a) -> [a]) -> [a] -> Promise e [a]
+// chainP :: ( a -> b ) -> [ Promise e a ] -> Promise [b]
 const chainP = curry((fn, arr) => Promise.all(chain(fn, arr)));
 
 // toArray :: { a: b } -> [{ k: a, v: b }]
@@ -17,7 +17,7 @@ const FutureFromPromise = (fn: (*) => Future) => Future((reject, resolve) => {
 	return () => {};
 });
 
-// innerJoin :: String -> String -> [a] -> [b] -> [{String:a}]
+// innerJoin :: String -> String -> [a] -> [b] -> [{ String: a }]
 const innerJoin = curry((k1, k2, l1, l2) => {
 	let list2Map = indexBy(prop(k2), l2);
 	return map(l1v => assoc(k1, list2Map[l1v[k1]], l1v), l1);
