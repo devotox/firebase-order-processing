@@ -11,7 +11,7 @@ const chainP = curry((fn, arr) => Promise.all(chain(fn, arr)));
 const toArray = compose(map(zipObj(['key', 'value'])), toPairs);
 
 // FutureFromPromise :: ( () -> Promise e a ) -> Future e a
-const FutureFromPromise = fn => Future((reject, resolve) => {
+const FutureFromPromise = (fn: (*) => Future) => Future((reject, resolve) => {
 	fn().then(resolve, reject);
 	return () => {};
 });
