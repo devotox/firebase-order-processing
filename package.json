@@ -30,7 +30,7 @@
     "preversion": "flow && sidekick run && npm test",
     "test": "sidekick run && npm run cover && npm run flow",
     "start": "npm run clean && npm run build && npm run setup && npm run process",
-    "cover": "istanbul cover ./node_modules/.bin/_mocha --- tests/index.js --timeout 5000"
+    "cover": "istanbul cover ./node_modules/.bin/_mocha --- tests/index.js --timeout 10000"
   },
   "directories": {
     "test": "tests"

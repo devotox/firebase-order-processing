@@ -1,6 +1,7 @@
 [ignore]
 .*/node_modules/@sidekick/*
 .*/node_modules/proxytron/*
+.*/tests/*
 
 [include]
 

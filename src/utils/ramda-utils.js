@@ -5,7 +5,7 @@ const Future = require('fluture');
 
 const { compose, chain, curry, map, assoc, prop, zipObj, toPairs, indexBy } = require('ramda');
 
-// chainP :: ( a -> b ) -> [ Promise e a ] -> Promise [b]
+// chainP :: (( a -> b ) -> [ Promise a ]) -> Promise [b]
 const chainP = curry((fn, arr) => Promise.all(chain(fn, arr)));
 
 // toArray :: { a: b } -> [{ k: a, v: b }]

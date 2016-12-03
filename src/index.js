@@ -19,8 +19,8 @@ const error = compose(closeDatabase, console.error);
 
 const showOrders = () => get('orders').then((orders) => console.log(orders));
 
-const run = composeP(closeDatabase, showOrders, processOrders, validateOrders, getOrders);
-
 const success = compose(closeDatabase, (() => console.log('Orders Processed!')));
+
+const run = composeP(closeDatabase, showOrders, processOrders, validateOrders, getOrders);
 
 run('orders').then(success).catch(error);

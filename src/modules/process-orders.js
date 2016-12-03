@@ -6,7 +6,8 @@ const { chainP, toArray } = require('../utils/ramda-utils');
 const database = require('./firebase').database();
 const { get } = require('../modules/get-data');
 
-const orderUpdate = order => database.ref('orders').child(order.key).update(order.value);
+const orderUpdate = order => database.ref('orders')
+	.child(order.key).update(order.value).then(() => order);
 
 const createUpdate = ({ order, source, charge }) => {
 	let chargeID = charge.id;

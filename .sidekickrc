@@ -1,0 +1,24 @@
+{
+    "exclude": [
+        "node_modules",
+        "flow-typed"
+    ],
+    "languages": {
+      "js": {
+        "sidekick-js-todos": {
+          "failCiOnError": false
+        },
+        "sidekick-jshint": {
+            "failCiOnError": true
+        },
+        "sidekick-security": {
+            "failCiOnError": false
+        }
+      },
+      "json": {
+          "sidekick-david": {
+              "failCiOnError": false
+          }
+      }
+    }
+}
