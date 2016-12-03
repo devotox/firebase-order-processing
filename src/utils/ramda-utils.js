@@ -10,11 +10,13 @@ const chainP = curry((fn, arr) => Promise.all(chain(fn, arr)));
 // toArray :: { a: b } -> [{ k: a, v: b }]
 const toArray = compose(map(zipObj(['key', 'value'])), toPairs);
 
+// jshint ignore: start
 // FutureFromPromise :: ( () -> Promise e a ) -> Future e a
 const FutureFromPromise = (fn: (*) => Future) => Future((reject, resolve) => {
 	fn().then(resolve, reject);
 	return () => {};
 });
+// jshint ignore: end
 
 // innerJoin :: String -> String -> [a] -> [b] -> [{String:a}]
 const innerJoin = curry((k1, k2, l1, l2) => {
@@ -28,4 +30,6 @@ const log = curry((msg, v) => {
     return v;
 });
 
+// jshint ignore: start
 module.exports = { log, chainP, toArray, innerJoin, Future, FutureFromPromise };
+// jshint ignore: end
