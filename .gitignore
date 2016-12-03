@@ -14,3 +14,4 @@ secrets/*
 
 # test files
 coverage/*
+npm-debug.log

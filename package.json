@@ -27,7 +27,7 @@
     "release-minor": "npm version minor",
     "release-major": "npm version major",
     "postversion": "git push && git push --tags",
-    "preversion": "flow && sidekick run && npm test",
+    "preversion": "npm run cover",
     "test": "sidekick run && npm run cover && npm run flow",
     "start": "npm run clean && npm run build && npm run setup && npm run process",
     "cover": "istanbul cover ./node_modules/.bin/_mocha --- tests/index.js --timeout 10000"
