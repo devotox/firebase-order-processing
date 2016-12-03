@@ -1,4 +1,5 @@
 // @flow
+// jshint ignore: start
 
 const Future = require('fluture');
 
@@ -28,4 +29,4 @@ const log = curry((msg, v) => {
     return v;
 });
 
-module.exports = { log, chainP, toArray, innerJoin, Future/*, FutureFromPromise */ };
+module.exports = { log, chainP, toArray, innerJoin, Future, FutureFromPromise };
