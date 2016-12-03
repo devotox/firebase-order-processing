@@ -20,3 +20,5 @@ script:
 - sidekick run --ci
 - npm run mocha
 - flow
+after_script:
+- cat ./test-coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
