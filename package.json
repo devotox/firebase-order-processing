@@ -1,0 +1,67 @@
+{
+  "name": "firebase-order-processing",
+  "description": "Firebase Order Processing",
+  "version": "0.5.0",
+  "repository": "",
+  "main": "dist/index.js",
+  "author": "Devonte",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Devonte Emokpae"
+    }
+  ],
+  "scripts": {
+    "process": "node dist/index.js",
+    "mocha": "mocha tests/index.js",
+    "setup": "node dist/setup/index.js",
+    "clean": "rm -rf dist && mkdir dist",
+    "initialize": "node dist/setup/initialize.js",
+    "debug": "babel-node-debug src/index.js",
+    "flow": "flow; test $? -eq 0 -o $? -eq 2",
+    "build": "babel src --out-dir dist --copy-files",
+    "watch": "babel src --out-dir dist --copy-files --watch",
+    "postrelease": "npm publish",
+    "release": "npm version patch",
+    "release-patch": "npm version patch",
+    "release-minor": "npm version minor",
+    "release-major": "npm version major",
+    "postversion": "git push && git push --tags",
+    "preversion": "flow && sidekick run && npm test",
+    "test": "sidekick run && npm run mocha && npm run flow",
+    "start": "npm run clean && npm run build && npm run setup && npm run process"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "dependencies": {
+    "commander": "2.9.0",
+    "firebase": "3.6.2",
+    "firebase-admin": "4.0.3",
+    "fluture": "4.1.0",
+    "inquirer": "1.2.3",
+    "model-base": "1.1.2",
+    "ramda": "0.22.1",
+    "sidekick": "1.12.2",
+    "stripe": "4.14.0"
+  },
+  "devDependencies": {
+    "babel-cli": "6.18.0",
+    "babel-node-debug": "2.0.0",
+    "babel-plugin-transform-flow-strip-types": "6.18.0",
+    "chai": "3.5.0",
+    "flow-bin": "0.36.0",
+    "mocha": "3.2.0",
+    "sidekick": "1.12.2"
+  },
+  "keywords": [
+    "Docker",
+    "Firebase",
+    "Order Management",
+    "Functional Programming"
+  ]
+}

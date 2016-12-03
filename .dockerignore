@@ -1,0 +1,13 @@
+# docker
+docker-compose.yml
+
+# git
+.git
+.gitignore
+
+# compiled output
+dist/*
+tmp/*
+
+# dependencies
+node_modules

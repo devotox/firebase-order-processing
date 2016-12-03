@@ -1,0 +1,9 @@
+[ignore]
+.*/node_modules/@sidekick/*
+.*/node_modules/proxytron/*
+
+[include]
+
+[libs]
+
+[options]

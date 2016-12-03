@@ -1,0 +1,21 @@
+[{
+    "userID": "",
+    "productID": "",
+    "payment": {
+        "cvc": "214",
+        "object": "card",
+        "exp_month": "08",
+        "exp_year": "2021",
+        "number": "5105 1051 0510 5100"
+    }
+}, {
+    "userID": "",
+    "productID": "",
+    "payment": {
+        "cvc": "222",
+        "object": "card",
+        "exp_month": "10",
+        "exp_year": "2020",
+        "number": "5200 8282 8282 8210"
+    }
+}]

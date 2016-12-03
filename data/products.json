@@ -1,0 +1,9 @@
+[{
+    "name": "Item1",
+    "amount": "399",
+    "currency": "gbp"
+}, {
+    "name": "Item2",
+    "amount": "499",
+    "currency": "gbp"
+}]

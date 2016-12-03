@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+- '6'
+sudo: false
+env:
+- CXX=g++-4.8
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - gcc-4.8
+    - g++-4.8
+cache:
+  directories:
+  - node_modules
+install:
+- npm install
+script:
+- sidekick run --ci
+- npm run mocha
+- flow
