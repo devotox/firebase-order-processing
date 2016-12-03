@@ -1,7 +1,7 @@
 {
   "name": "firebase-order-processing",
   "description": "Firebase Order Processing",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "repository": "",
   "main": "dist/index.js",
   "author": "Devonte",
