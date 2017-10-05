@@ -1,5 +1,7 @@
 # Firebase Order Processing
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/devotox/firebase-order-processing.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/devotox/firebase-order-processing.svg?branch=master)](https://travis-ci.org/devotox/firebase-order-processing)
 [![Coverage Status](https://coveralls.io/repos/github/devotox/firebase-order-processing/badge.svg?branch=master)](https://coveralls.io/github/devotox/firebase-order-processing?branch=master)
 
