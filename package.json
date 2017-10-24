@@ -42,7 +42,7 @@
   "dependencies": {
     "commander": "2.11.0",
     "firebase": "4.6.0",
-    "firebase-admin": "5.4.2",
+    "firebase-admin": "5.4.3",
     "fluture": "7.2.0",
     "inquirer": "3.3.0",
     "model-base": "1.2.3",
