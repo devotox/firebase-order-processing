@@ -47,7 +47,7 @@
     "inquirer": "3.3.0",
     "model-base": "1.2.3",
     "ramda": "0.25.0",
-    "stripe": "5.1.1"
+    "stripe": "5.2.0"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
