@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "commander": "2.12.0",
-    "firebase": "4.6.2",
+    "firebase": "4.7.0",
     "firebase-admin": "5.5.1",
     "fluture": "7.2.2",
     "inquirer": "4.0.1",
